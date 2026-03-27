@@ -8,7 +8,7 @@ import java.util.concurrent.ThreadLocalRandom;
 @RestController
 public class PaymentController {
 
-    @GetMapping("/payment/process")
+    @GetMapping("/paynent/process")
     public String processPayment() {
         if (ThreadLocalRandom.current().nextInt(10) < 4) {
             throw new RuntimeException("Payment service random failure");

@@ -2,10 +2,10 @@ server:
   port: 8080
 
 services:
-  payment:
+  paynent:
     url: http://localhost:8081
   inventory:
-    url: http://localhost:8082
+    url: http://localhost:8085
 
 spring:
   application:
@@ -27,7 +27,7 @@ resilience4j:
         failureRateThreshold: 50
         waitDurationInOpenState: 10s
         permittedNumberOfCallsInHalfOpenState: 2
-      payment:
+      paynent:
         slidingWindowSize: 5
         minimumNumberOfCalls: 3
         failureRateThreshold: 50

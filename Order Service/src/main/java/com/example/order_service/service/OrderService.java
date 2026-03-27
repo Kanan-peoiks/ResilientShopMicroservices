@@ -7,6 +7,7 @@ import com.example.order_service.dto.OrderRequest;
 import com.example.order_service.dto.OrderResponse;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import io.github.resilience4j.retry.annotation.Retry;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -20,7 +21,7 @@ public class OrderService {
 
     public OrderService(InventoryService inventoryService,
                         PaymentService paymentService,
-                        OrderService self) {
+                        @Lazy OrderService self) {
         this.inventoryService = inventoryService;
         this.paymentService = paymentService;
         this.self = self;
