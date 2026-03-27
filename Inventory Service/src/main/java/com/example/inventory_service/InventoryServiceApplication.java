@@ -1,13 +1,13 @@
-package com.example.payment_service;
+package com.example.inventory_service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PaymentServiceApplication {
+public class InventoryServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(PaymentServiceApplication.class, args);
+        SpringApplication.run(InventoryServiceApplication.class, args);
     }
 
 }
